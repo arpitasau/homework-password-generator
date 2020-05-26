@@ -31,21 +31,15 @@ function getSpecialCharacters() {
 }
 
 // Write password to the #password input
-
+var passwordText = document.querySelector("#password");
 function writePassword() {
-  
-  var passwordText = document.querySelector("#password");
-  var password = generatePassword();
-  passwordText.value = password;
-  console.log('Password: ', passwordText.value);
+  setTimeout(function() {
+    var password = generatePassword();
+    passwordText.value = password;
+  }, 100);
 }
-
-function refresh() {
-  location.reload();
-}
-
 function reloadAndDisplay() {
-  refresh();
+  passwordText.value = '';  
   writePassword();
 }
 
