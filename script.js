@@ -5,9 +5,9 @@ const randomFunction = {
   symbol : getSpecialCharacters,
 };
 
-
-// Assignment Code
+//DOM elements
 var generateBtn = document.querySelector("#generate");
+
 // https://www.ascii-code.com/
 // functions to generate random upperCase letter
 function getUpperCase() {
@@ -74,7 +74,10 @@ var upper, lower, number, symbol;
   if (specialChar) {
     passwordCriteriaArr.push({symbol});
   }
-
+  if (passwordCriteriaArr.length === 0){
+    alert ('Atleast one character type needs to be selected');
+    return generatedPassword;
+  }
   for(let i = 0; i <= passwordLen; i += passwordCriteriaArr.length) {
     passwordCriteriaArr.forEach(criteria => {
       const generatorFuncName = Object.keys(criteria)[0];
