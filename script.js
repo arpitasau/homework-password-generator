@@ -33,20 +33,31 @@ function getSpecialCharacters() {
 // Write password to the #password input
 
 function writePassword() {
+  
   var passwordText = document.querySelector("#password");
   var password = generatePassword();
   passwordText.value = password;
+  console.log('Password: ', passwordText.value);
+}
+
+function refresh() {
+  location.reload();
+}
+
+function reloadAndDisplay() {
+  refresh();
+  writePassword();
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", reloadAndDisplay);
 
 function generatePassword() {
   var passwordCriteriaArr = [];
   var generatedPassword = '';
   
   //Prompting for password length
-  var passwordLength = prompt("Please enter length of your password? (min 8 characters -- max 128 characters");
+  var passwordLength = prompt("Please enter length of your password? (min 8 characters - max 128 characters");
   const passwordLen = +passwordLength;
 
   if (passwordLen < 8 || passwordLen > 128) {
