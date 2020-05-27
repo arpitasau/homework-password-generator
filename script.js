@@ -45,7 +45,7 @@ function generatePassword() {
   var generatedPassword = '';
   
   //Prompting for password length
-  var passwordLength = prompt("Please enter length of your password? (min 8 characters - max 128 characters");
+  var passwordLength = prompt("Please enter length of your password (min 8 characters - max 128 characters)");
   const passwordLen = +passwordLength;
 
   if (passwordLen < 8 || passwordLen > 128) {
@@ -54,7 +54,7 @@ function generatePassword() {
   }
 var upperCase = confirm("Do you want to include upper case letters?");
 var lowerCase = confirm("Do you want to include lower case letters?");
-var numbers = confirm("Do you want to include numeric?");
+var numbers = confirm("Do you want to include numbers?");
 var specialChar = confirm("Do you want to include special characters?");
 
 //Declaring keys for the randomFunction object
