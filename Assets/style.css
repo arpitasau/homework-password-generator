@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #c0c7cf;
+  background-image: url("background.jpg");
 }
 
 .wrapper {
@@ -27,7 +27,7 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);  ;
+  color: whitesmoke;
 }
 h2 {
   text-align: center;
@@ -76,7 +76,7 @@ h2 {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(11, 165, 236);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -88,12 +88,11 @@ h2 {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  opacity: .7;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
+.btn:hover {opacity: 1}
+.btn:focus { outline: none; } 
 
 .float-right {
   float: right;

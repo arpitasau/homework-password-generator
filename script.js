@@ -7,31 +7,25 @@ const randomFunction = {
 
 //DOM elements
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
 
 // https://www.ascii-code.com/
-// functions to generate random upperCase letter
+// functions to generate random upperCase, lowerCase, number and special characters
 function getUpperCase() {
   return String.fromCharCode(Math.floor(Math.random() * 26)+ 65); 
 }
-
-// functions to generate random lowerCase letter
 function getLowerCase() {
   return String.fromCharCode(Math.floor(Math.random() * 26)+ 97); 
 }
-
-//functions to generate random number
 function getNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10)+ 48); 
 }
-
-//functions to generate random special characters
 function getSpecialCharacters() {
   const symbols= "!@#$%^&*(){}[]=<>/,.";
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 // Write password to the #password input
-var passwordText = document.querySelector("#password");
 function writePassword() {
   setTimeout(function() {
     var password = generatePassword();
