@@ -48,14 +48,19 @@ function generatePassword() {
   var passwordLength = prompt("Please enter length of your password (min 8 characters - max 128 characters)");
   const passwordLen = +passwordLength;
 
+  // validate that password lenght is a valid number from 8- 128
+  if (!passwordLen) {
+   alert('Please enter a valid number');
+   return generatedPassword;
+  }
   if (passwordLen < 8 || passwordLen > 128) {
     alert('Password length must be in between 8 - 128 characters');
     return generatedPassword;
   }
-var upperCase = confirm("Do you want to include upper case letters?");
-var lowerCase = confirm("Do you want to include lower case letters?");
-var numbers = confirm("Do you want to include numbers?");
-var specialChar = confirm("Do you want to include special characters?");
+var upperCase = confirm('Do you want to include upper case letters?');
+var lowerCase = confirm('Do you want to include lower case letters?');
+var numbers = confirm('Do you want to include numbers?');
+var specialChar = confirm('Do you want to include special characters?');
 
 //Declaring keys for the randomFunction object
 var upper, lower, number, symbol;
